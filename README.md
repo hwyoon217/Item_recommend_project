@@ -10,7 +10,7 @@
 <br/>
 
 ## 프로젝트 구조
-1. 프로젝트 진행과정
+### 1. 프로젝트 진행과정
 
 |날짜|세부 내용|
 |:------:|---|
@@ -22,17 +22,19 @@
 |2/13 - 2/14|프로그램 테스트 및 모듈화|
 <br/>
 
-2. 데이터셋 및 파이프라인
+### 2. 데이터셋 및 파이프라인
   - 데이터는 캐글에 있는 fashion campus 데이터 활용<br>
      <https://www.kaggle.com/datasets/latifahhukma/fashion-campus><br/><br/>
   -   파이프라인
-<img src="https://github.com/hwyoon217/recommend_model_project/blob/main/pipeline.PNG" width="1400" height="600"/><br/>
+<img src="https://github.com/hwyoon217/recommend_model_project/blob/main/pipeline.PNG" width="1400" height="600"/><br/><br/>
 
-3. 결과
+### 3. 결과<br/>
+<img src="https://github.com/hwyoon217/recommend_model_project/blob/main/result.PNG" width="1400" height="400"/><br/>
+  -  RFM을 통해 세분화된 고객들에게 각각 다른 모델을 적용하여 상품을 추천
   -  NLP 모델의 경우 precision@k 값이 0.2, recall@k 갑시 0에 수렴하는 값이 나와서 성능면에서는 많이 아쉬움
   -  ALS 모델의 경우 하이퍼파라미터 튜닝 결과 factors: 50, iteration : 10, regularization: 0.001 일 때 성능이 가장 좋음
   <br/>
 
 ## 회고
-  -  전반적으로 평가지표가 낮게 나온 것이 아쉽다. 
-  -  EDA 결과, 매년 모바일 이용자 수가 꾸준히 증가하는 것을 알 수 있는데, 이용자에 대한 추천시스템도 구축할 필요가 있다.
+  -  NLP 모델의 경우, 평가지표가 생각보다 낮게 나온것과, recall@k 값을 올리지 못한 것이 너무 아쉬웠다.
+  -  EDA 결과, 매년 모바일 이용자 수가 꾸준히 증가하는 것을 알 수 있다. 따라서 모바일 이용자만 따로 추출하여 추천시스템을 구축할 예정이다.
